@@ -66,38 +66,14 @@ return
 Space & i::
     send, {Up}
 return
-Space & [::
-    send, {{}
-return
-Space & ]::
-    send, {}}
-return
-Space & y::
-    send, {!}
-return
-Space & u::
-    send, {?}
-return
 Space & o::
     send, {(}
 return
 Space & p::
     send, {)}
 return
-Space & \::
-    send, {|}
-return
-Space & SC027::    ; SC027はセミコロンのスキャンコード
-    send, {:}
-return
-Space & '::
-    send, {"}
-return
-Space & n::
-    send, {<}
-return
-Space & m::
-    send, {>}
+Space & /::
+    send, {!}
 return
 Space & h::
     send, {BackSpace}
