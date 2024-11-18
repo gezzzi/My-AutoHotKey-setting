@@ -2,10 +2,11 @@
 SetWorkingDir A_ScriptDir
 SendMode "Input"
 
-; CapsLockをSpaceに
-CapsLock:: {
-    Send "{Space}"
-}
+; CapsLockの標準機能をオフにする
+SetCapsLockState "AlwaysOff"  
+
+; CapsLockで日本語/英語切り替え
+CapsLock::Send "{vkF3sc029}"
 
 ; Space単体の場合はSpaceを送信
 Space:: Send "{Space}"
