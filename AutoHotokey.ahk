@@ -69,32 +69,24 @@ Space & l:: {
 Space & i:: {
     Send "{Up}"
 }
+Space & u:: {
+    Send "(){Left}"    ; ()
+}
 Space & o:: {
-    Send "("
+    Send "`"`"{Left}"    ; ""
 }
 Space & p:: {
-    Send ")"
+    Send "<>{Left}"    ; <>
+}
+Space & [:: {
+    Send "{{}{}}{Left}"    ; {}
+}
+Space & ]:: {
+    Send "[]{Left}"    ; []
 }
 Space & /:: {
     Send "{!}"
 }
 Space & h:: {
     Send "{BackSpace}"
-}
-
-; 便利な括弧の自動補完
-Space & 1:: {
-    Send "(){Left}"    ; ()
-}
-Space & 2:: {
-    Send "{{}{}}{Left}"    ; {}
-}
-Space & 3:: {
-    Send "[]{Left}"    ; []
-}
-Space & 4:: {
-    Send "<>{Left}"    ; <>
-}
-Space & 5:: {
-    Send "`"`"{Left}"    ; ""
 }
