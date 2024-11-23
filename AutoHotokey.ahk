@@ -76,13 +76,13 @@ Space & o:: {
     Send "`"`"{Left}"    ; ""
 }
 Space & p:: {
-    Send "<>{Left}"    ; <>
-}
-Space & [:: {
     Send "{{}{}}{Left}"    ; {}
 }
-Space & ]:: {
+Space & [:: {
     Send "[]{Left}"    ; []
+}
+Space & ]:: {
+    Send "<>{Left}"    ; <>
 }
 Space & /:: {
     Send "{!}"
