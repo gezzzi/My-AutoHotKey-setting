@@ -81,7 +81,7 @@ Space & p:: {
 Space & [:: {
     Send "[]{Left}"    ; []
 }
-Space & ]:: {
+Space & `;:: {
     Send "<>{Left}"    ; <>
 }
 Space & /:: {
