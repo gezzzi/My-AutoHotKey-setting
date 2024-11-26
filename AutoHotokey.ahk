@@ -85,6 +85,12 @@ Space & [:: {
 Space & `;:: {
     Send "<>{Left}"    ; <>
 }
+Space & ,:: {
+    Send "<"
+}
+Space & .:: {
+    Send ">"
+}
 Space & /:: {
     Send "{!}"
 }
