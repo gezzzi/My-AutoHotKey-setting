@@ -70,6 +70,9 @@ Space & l:: {
 Space & i:: {
     Send "{Up}"
 }
+Space & `;:: {
+    Send "{End}"
+}
 Space & u:: {
     Send "(){Left}"    ; ()
 }
@@ -82,7 +85,7 @@ Space & p:: {
 Space & [:: {
     Send "[]{Left}"    ; []
 }
-Space & `;:: {
+Space & ':: {
     Send "<>{Left}"    ; <>
 }
 Space & ,:: {
