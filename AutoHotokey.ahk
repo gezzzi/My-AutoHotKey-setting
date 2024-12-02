@@ -88,6 +88,12 @@ Space & [:: {
 Space & ':: {
     Send "<>{Left}"    ; <>
 }
+Space & n:: {
+    Send "{#}"
+}
+Space & m:: {
+    Send "%"
+}
 Space & ,:: {
     Send "<"
 }
