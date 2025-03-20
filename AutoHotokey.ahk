@@ -4,13 +4,16 @@ SetWorkingDir A_ScriptDir
 SendMode "Input"
 
 ; CapsLockの標準機能をオフにする
-SetCapsLockState "AlwaysOff"  
+SetCapsLockState "AlwaysOff"
 
 ; CapsLockで日本語/英語切り替え
-CapsLock::Send "{vkF3sc029}"
+CapsLock:: Send "{vkF3sc029}"
 
 ; Space単体の場合はSpaceを送信
 Space:: Send "{Space}"
+
+; セミコロンキーを押したときにハイフンを出力
+`;:: Send "-"
 
 ; Spaceをhotkeyとして使う
 Space & q:: {
@@ -26,7 +29,7 @@ Space & r:: {
     Send "3"
 }
 Space & t:: {
-    Send "-"
+    SendInput "{U+003B}"  ; Unicodeを使用してセミコロンを送信
 }
 Space & a:: {
     Send "0"
