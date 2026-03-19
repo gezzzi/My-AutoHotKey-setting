@@ -9,103 +9,332 @@ SetCapsLockState "AlwaysOff"
 ; CapsLockで日本語/英語切り替え
 CapsLock:: Send "{vkF3sc029}"
 
-; Space単体の場合はSpaceを送信
-Space:: Send "{Space}"
+; Spaceの状態管理
+spaceDown := false
+spaceUsedAsModifier := false
 
-; セミコロンキーを押したときにハイフンを出力
-`;:: Send "-"
+*Space:: {
+    global spaceDown, spaceUsedAsModifier
+    spaceDown := true
+    spaceUsedAsModifier := false
+}
 
-; Spaceをhotkeyとして使う
-Space & q:: {
-    Send "{+}"
+*Space up:: {
+    global spaceDown, spaceUsedAsModifier
+    spaceDown := false
+    if (!spaceUsedAsModifier)
+        Send "{Space}"
 }
-Space & w:: {
-    Send "1"
+
+; --- Spaceコンビネーションキー ---
+
+*q:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "{+}"
+    } else {
+        Send "{Blind}q"
+    }
 }
-Space & e:: {
-    Send "2"
+
+*w:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "1"
+    } else {
+        Send "{Blind}w"
+    }
 }
-Space & r:: {
-    Send "3"
+
+*e:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "2"
+    } else {
+        Send "{Blind}e"
+    }
 }
-Space & t:: {
-    SendInput "{U+003B}"  ; Unicodeを使用してセミコロンを送信
+
+*r:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "3"
+    } else {
+        Send "{Blind}r"
+    }
 }
-Space & a:: {
-    Send "0"
+
+*t:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        SendInput "{U+003B}"
+    } else {
+        Send "{Blind}t"
+    }
 }
-Space & s:: {
-    Send "4"
+
+*a:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "0"
+    } else {
+        Send "{Blind}a"
+    }
 }
-Space & d:: {
-    Send "5"
+
+*s:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "4"
+    } else {
+        Send "{Blind}s"
+    }
 }
-Space & f:: {
-    Send "6"
+
+*d:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "5"
+    } else {
+        Send "{Blind}d"
+    }
 }
-Space & g:: {
-    Send "="
+
+*f:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "6"
+    } else {
+        Send "{Blind}f"
+    }
 }
-Space & z:: {
-    Send "*"
+
+*g:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "="
+    } else {
+        Send "{Blind}g"
+    }
 }
-Space & x:: {
-    Send "7"
+
+*z:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "*"
+    } else {
+        Send "{Blind}z"
+    }
 }
-Space & c:: {
-    Send "8"
+
+*x:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "7"
+    } else {
+        Send "{Blind}x"
+    }
 }
-Space & v:: {
-    Send "9"
+
+*c:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "8"
+    } else {
+        Send "{Blind}c"
+    }
 }
-Space & b:: {
-    Send "_"
+
+*v:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "9"
+    } else {
+        Send "{Blind}v"
+    }
 }
-Space & j:: {
-    Send "{Left}"
+
+*b:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "_"
+    } else {
+        Send "{Blind}b"
+    }
 }
-Space & k:: {
-    Send "{Down}"
+
+*h:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "{BackSpace}"
+    } else {
+        Send "{Blind}h"
+    }
 }
-Space & l:: {
-    Send "{Right}"
+
+*j:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "{Left}"
+    } else {
+        Send "{Blind}j"
+    }
 }
-Space & i:: {
-    Send "{Up}"
+
+*k:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "{Down}"
+    } else {
+        Send "{Blind}k"
+    }
 }
-Space & `;:: {
-    Send "{End}"
+
+*l:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "{Right}"
+    } else {
+        Send "{Blind}l"
+    }
 }
-Space & u:: {
-    Send "(){Left}"    ; ()
+
+*i:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "{Up}"
+    } else {
+        Send "{Blind}i"
+    }
 }
-Space & o:: {
-    Send "`"`"{Left}"    ; ""
+
+*u:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "(){Left}"
+    } else {
+        Send "{Blind}u"
+    }
 }
-Space & p:: {
-    Send "{{}{}}{Left}"    ; {}
+
+*o:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "`"`"{Left}"
+    } else {
+        Send "{Blind}o"
+    }
 }
-Space & [:: {
-    Send "[]{Left}"    ; []
+
+*p:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "{{}{}}{Left}"
+    } else {
+        Send "{Blind}p"
+    }
 }
-Space & ':: {
-    Send "<>{Left}"    ; <>
+
+*[:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "[]{Left}"
+    } else {
+        Send "{Blind}["
+    }
 }
-Space & n:: {
-    Send "{#}"
+
+*':: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "<>{Left}"
+    } else {
+        Send "{Blind}'"
+    }
 }
-Space & m:: {
-    Send "%"
+
+*n:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "{#}"
+    } else {
+        Send "{Blind}n"
+    }
 }
-Space & ,:: {
-    Send "<"
+
+*m:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "%"
+    } else {
+        Send "{Blind}m"
+    }
 }
-Space & .:: {
-    Send ">"
+
+*,:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "<"
+    } else {
+        Send "{Blind},"
+    }
 }
-Space & /:: {
-    Send "{!}"
+
+*.:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send ">"
+    } else {
+        Send "{Blind}."
+    }
 }
-Space & h:: {
-    Send "{BackSpace}"
+
+*/:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "{!}"
+    } else {
+        Send "{Blind}/"
+    }
+}
+
+; セミコロンキー（通常時はハイフン、Spaceコンボ時はEnd）
+*`;:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "{End}"
+    } else {
+        Send "-"
+    }
 }
