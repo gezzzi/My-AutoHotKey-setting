@@ -28,16 +28,6 @@ spaceUsedAsModifier := false
 
 ; --- Spaceコンビネーションキー ---
 
-*q:: {
-    global spaceDown, spaceUsedAsModifier
-    if (spaceDown) {
-        spaceUsedAsModifier := true
-        Send "{+}"
-    } else {
-        Send "{Blind}q"
-    }
-}
-
 *w:: {
     global spaceDown, spaceUsedAsModifier
     if (spaceDown) {
@@ -65,16 +55,6 @@ spaceUsedAsModifier := false
         Send "3"
     } else {
         Send "{Blind}r"
-    }
-}
-
-*t:: {
-    global spaceDown, spaceUsedAsModifier
-    if (spaceDown) {
-        spaceUsedAsModifier := true
-        SendInput "{U+003B}"
-    } else {
-        Send "{Blind}t"
     }
 }
 
@@ -125,16 +105,6 @@ spaceUsedAsModifier := false
         Send "="
     } else {
         Send "{Blind}g"
-    }
-}
-
-*z:: {
-    global spaceDown, spaceUsedAsModifier
-    if (spaceDown) {
-        spaceUsedAsModifier := true
-        Send "*"
-    } else {
-        Send "{Blind}z"
     }
 }
 
@@ -302,7 +272,7 @@ spaceUsedAsModifier := false
     global spaceDown, spaceUsedAsModifier
     if (spaceDown) {
         spaceUsedAsModifier := true
-        Send "<"
+        Send ":"
     } else {
         Send "{Blind},"
     }
@@ -312,7 +282,7 @@ spaceUsedAsModifier := false
     global spaceDown, spaceUsedAsModifier
     if (spaceDown) {
         spaceUsedAsModifier := true
-        Send ">"
+        Send ";"
     } else {
         Send "{Blind}."
     }
