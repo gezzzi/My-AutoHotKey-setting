@@ -28,6 +28,16 @@ spaceUsedAsModifier := false
 
 ; --- Spaceコンビネーションキー ---
 
+*q:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "0"
+    } else {
+        Send "{Blind}q"
+    }
+}
+
 *w:: {
     global spaceDown, spaceUsedAsModifier
     if (spaceDown) {
@@ -58,11 +68,21 @@ spaceUsedAsModifier := false
     }
 }
 
+*t:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "4"
+    } else {
+        Send "{Blind}t"
+    }
+}
+
 *a:: {
     global spaceDown, spaceUsedAsModifier
     if (spaceDown) {
         spaceUsedAsModifier := true
-        Send "0"
+        Send "5"
     } else {
         Send "{Blind}a"
     }
@@ -72,7 +92,7 @@ spaceUsedAsModifier := false
     global spaceDown, spaceUsedAsModifier
     if (spaceDown) {
         spaceUsedAsModifier := true
-        Send "4"
+        Send "6"
     } else {
         Send "{Blind}s"
     }
@@ -82,7 +102,7 @@ spaceUsedAsModifier := false
     global spaceDown, spaceUsedAsModifier
     if (spaceDown) {
         spaceUsedAsModifier := true
-        Send "5"
+        Send "7"
     } else {
         Send "{Blind}d"
     }
@@ -92,7 +112,7 @@ spaceUsedAsModifier := false
     global spaceDown, spaceUsedAsModifier
     if (spaceDown) {
         spaceUsedAsModifier := true
-        Send "6"
+        Send "8"
     } else {
         Send "{Blind}f"
     }
@@ -102,29 +122,9 @@ spaceUsedAsModifier := false
     global spaceDown, spaceUsedAsModifier
     if (spaceDown) {
         spaceUsedAsModifier := true
-        Send "="
+        Send "9"
     } else {
         Send "{Blind}g"
-    }
-}
-
-*x:: {
-    global spaceDown, spaceUsedAsModifier
-    if (spaceDown) {
-        spaceUsedAsModifier := true
-        Send "7"
-    } else {
-        Send "{Blind}x"
-    }
-}
-
-*c:: {
-    global spaceDown, spaceUsedAsModifier
-    if (spaceDown) {
-        spaceUsedAsModifier := true
-        Send "8"
-    } else {
-        Send "{Blind}c"
     }
 }
 
@@ -132,7 +132,7 @@ spaceUsedAsModifier := false
     global spaceDown, spaceUsedAsModifier
     if (spaceDown) {
         spaceUsedAsModifier := true
-        Send "9"
+        Send "/"
     } else {
         Send "{Blind}v"
     }
