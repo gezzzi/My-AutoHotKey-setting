@@ -252,7 +252,7 @@ spaceUsedAsModifier := false
     global spaceDown, spaceUsedAsModifier
     if (spaceDown) {
         spaceUsedAsModifier := true
-        Send "{#}"
+        Send ";"
     } else {
         Send "{Blind}n"
     }
@@ -262,29 +262,9 @@ spaceUsedAsModifier := false
     global spaceDown, spaceUsedAsModifier
     if (spaceDown) {
         spaceUsedAsModifier := true
-        Send "%"
-    } else {
-        Send "{Blind}m"
-    }
-}
-
-*,:: {
-    global spaceDown, spaceUsedAsModifier
-    if (spaceDown) {
-        spaceUsedAsModifier := true
         Send ":"
     } else {
-        Send "{Blind},"
-    }
-}
-
-*.:: {
-    global spaceDown, spaceUsedAsModifier
-    if (spaceDown) {
-        spaceUsedAsModifier := true
-        Send ";"
-    } else {
-        Send "{Blind}."
+        Send "{Blind}m"
     }
 }
 
