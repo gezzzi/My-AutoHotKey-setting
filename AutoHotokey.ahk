@@ -128,11 +128,41 @@ spaceUsedAsModifier := false
     }
 }
 
-*v:: {
+*z:: {
     global spaceDown, spaceUsedAsModifier
     if (spaceDown) {
         spaceUsedAsModifier := true
         Send "/"
+    } else {
+        Send "{Blind}z"
+    }
+}
+
+*x:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "*"
+    } else {
+        Send "{Blind}x"
+    }
+}
+
+*c:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "{+}"
+    } else {
+        Send "{Blind}c"
+    }
+}
+
+*v:: {
+    global spaceDown, spaceUsedAsModifier
+    if (spaceDown) {
+        spaceUsedAsModifier := true
+        Send "-"
     } else {
         Send "{Blind}v"
     }
